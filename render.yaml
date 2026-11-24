@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: alphapulse-ai-trader
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: TZ
+        value: Asia/Seoul
+    disk:
+      name: alphapulse-data
+      mountPath: /app/data
+      sizeGB: 1
